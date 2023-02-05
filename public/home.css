@@ -1,0 +1,649 @@
+/* MASTER */
+
+html {
+    font-family: 'Fira Code', monospace;
+    font-weight: 200;
+    color: white;
+}
+
+body {
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+
+/*BODY */
+
+.home__background {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+}
+
+.prism {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height:40vh;
+    width: auto;
+    z-index: -1;
+    clip-path: inset(0 0 27% 0);
+}
+
+/* HEADER */
+
+.header__name {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    vertical-align: middle;
+    /*line-height: 1rem;*/
+}
+
+
+
+.header__container-main {
+    margin: 3vh 10vh;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:baseline;
+}
+
+.header__8 {
+    width: 1.5rem;
+    height: 3rem;
+    transform: rotate(90deg);
+    filter: grayscale(40%);
+}
+
+.header__container-name {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    line-height: 0rem;
+    height: 1.5rem;
+    
+}
+
+.header__title {
+    color: white;
+}
+
+/* MAIN */
+
+.main__container {
+    margin: 3vh 10vh;
+}
+
+.home_section2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 75%;
+    margin: 3vh;
+}
+
+.home__box {
+color: rgb(255, 255, 255);
+text-transform: uppercase;
+font-size: 2.1rem;
+
+}
+
+.main__projects-container {
+    margin: 1vh 5vh;
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgb(92, 92, 92);
+    gap: 13vw;
+    animation-delay: 3s;
+}
+
+.main__project {
+    animation: twinkle_spe 1s 1;
+    animation-delay: 3s;
+}
+
+@keyframes twinkle_spe {
+    
+    0% {
+       color: rgb(92, 92, 92);
+    }
+
+    50% {
+        color: white;
+     }
+
+     100% {
+        color: rgb(92, 92, 92);
+     }
+    
+}
+
+.main__landscape {
+    position: relative;
+}
+
+.main__landscape-moon {
+    position: absolute;
+    top : 40px;
+    right:80px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background:
+      linear-gradient(to bottom,rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)),
+      url(https://grainy-gradients.vercel.app/noise.svg);
+    
+}
+
+
+/*FRAMES */
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+  }
+  
+  @property --gradX {
+    syntax: '<percentage>';
+    initial-value: 50%;
+    inherits: true;
+  }
+  
+  @property --gradY {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+  }
+  
+
+  
+  :root {
+      --d: 2500ms;
+      --angle: 90deg;
+      --gradX: 100%;
+      --gradY: 50%;
+      --c1: rgba(168, 239, 255, 1);
+      --c2: rgba(168, 239, 255, 0.1);
+  }
+  
+  .wrapper {
+      min-width: min(40rem, 100%);
+  }
+  
+  .main__window-container {
+      font-size: 3vw;
+      border: 0.15rem solid;
+      border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+      animation: borderRotate var(--d) linear 1 forwards;
+      background:
+      linear-gradient(to bottom,rgba(0, 0, 0, 0.7),rgba(31, 31, 31, 0.7)),
+      url(https://grainy-gradients.vercel.app/noise.svg);
+      height : 55vh;
+      position: relative;
+      overflow: hidden;
+  }
+  
+  .main__window-container:nth-child(2) {
+      border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
+      animation: borderRadial var(--d) linear 1 forwards;
+  }
+  
+  @keyframes borderRotate {
+      100% {
+          --angle: 420deg;
+      }
+  }
+  
+  @keyframes borderRadial {
+      20% {
+          --gradX: 100%;
+          --gradY: 50%;
+      }
+      40% {
+          --gradX: 100%;
+          --gradY: 100%;
+      }
+      60% {
+          --gradX: 50%;
+          --gradY: 100%;
+      }
+      80% {
+          --gradX: 0%;
+          --gradY: 50%;
+      }
+      100% {
+          --gradX: 50%;
+          --gradY: 0%;
+      }
+  }
+
+  .main__content-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  .main__content-text-container {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+   transform: translate(0%,-50%);
+    width : 50%;
+    height: 80% ;
+    z-index:10001;
+
+  }
+
+  .main__content-text-type {
+    font-size: 0.9rem;
+    color: rgb(59, 255, 209)
+
+  }
+
+  .main__content-text-title {
+    font-size: 1.9rem;
+    margin-top: 0.5vh;
+
+  }
+
+  .main__content-text-descr {
+    font-size: 0.9rem;
+    margin-top: 2vh;
+    line-height: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.384);
+    padding: 2vh;
+    z-index: 1000;
+    text-align: justify;
+  }
+
+  .descr-gr {
+    width: 90%;
+  }
+
+  .main__content-text-technos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+  }
+
+  .main__content-text-techno {
+    margin: 1vh;
+    font-size: 0.9rem;
+    color:rgb(142, 230, 255);
+  }
+
+  .main__content-gr-info-pin {
+    margin: 1vh;
+    font-size: 1rem;
+    color:rgb(142, 230, 255);
+    position: absolute;
+    bottom: 0%;
+    width: 40%;
+    text-align: center;
+    line-height: 1.4rem;
+  }
+
+  .pin-in-text {
+    width: 1.3rem;
+
+    height: 1.3rem;
+    fill: white;
+    animation: bounce 0.7s ease 10;
+  }
+
+  @keyframes bounce{
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+  .main__content-img {
+    position: absolute;
+    height: 80%;
+    width: auto;
+    right:5%;
+    top: 50%;
+    transform: translate(0%,-50%);
+    filter:brightness(50%) ;
+    z-index:10000;
+  }
+
+  .main__content-img-maths {
+    position: absolute;
+    height: 80%;
+    width: auto;
+    right:5%;
+    top: 50%;
+    transform: translate(0%,-50%);
+    filter:contrast(120%);
+    z-index:10000;
+  }
+
+  .main__content-img-maths-counter {
+    position: absolute;
+    color:white;
+    right: 7%;
+    bottom:3%;
+    font-size: 0.8rem;
+    font-weight: 800;
+
+
+  }
+
+  .main__content-img:hover {
+    filter:brightness(100%) ;
+  }
+
+  .main__container-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .main__subcontainer-img {
+    position: relative;
+    height: 90%;
+    aspect-ratio: 798.08/447.47;
+    
+  }
+
+  .main__content-img-bzh {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    right:0%;
+    top: 50%;
+    transform: translate(0%,-50%);
+    z-index: 100;
+    filter: brightness(200%);
+    filter:sepia(60%);
+    opacity: 0.5;
+  }
+
+  .main__checkpoint-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .main__content_checkpoint {
+    position: absolute;
+    fill: rgb(255, 255, 255,0.6);
+    height: 2vh;
+    width: 2vh;
+    z-index:101;
+  }
+
+  .main__content_checkpoint:hover {
+    fill: white;
+  }
+
+  .main__content__pin {
+    width: 100%;
+    height: 100%;
+  }
+
+  .gr-img-1 {
+    top:14%;
+    right: 4%;
+    
+    
+  }
+
+
+
+  .gr-img-2 {
+    top:9%;
+    right: 12%;
+  }
+
+  .gr-img-3 {
+    top:1.5%;
+    right: 57%;
+  }
+
+  .gr-img-4 {
+    top:8.5%;
+    right: 60%;
+  }
+
+  .gr-img-5 {
+    top:11%;
+    right: 80%;
+  }
+
+  .gr-img-6 {
+    top:17%;
+    right: 86%;
+  }
+
+  .gr-img-7 {
+    top:37%;
+    right: 85%;
+  }
+
+  .gr-img-8 {
+    top:64%;
+    right: 73%;
+  }
+
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 90vh;
+    width: auto;
+    border: 10px solid linear-gradient(to bottom,rgba(255, 32, 32, 0.744),rgba(255, 95, 32, 0.744));
+    z-index: 1000000 ;
+    display: none;
+    filter: grayscale(20%);
+
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.753);
+    z-index: 100000;
+    display: none;
+  }
+
+
+  /* FOOTER--------------------------- */
+
+.footer__container {
+    position: absolute;
+    bottom: 200px;
+    left: 3.5vh;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.footer__logo {
+    height: 3vh;
+    width: auto;
+    fill : white;
+}
+
+.footer__color--container {
+    width: 3vh;
+    height : 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__color {
+    width: 100%;
+    height:10px;
+    
+}
+
+.red {
+    background:linear-gradient(to bottom,rgba(255, 32, 32, 0.744),rgba(255, 95, 32, 0.744)),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+}
+
+
+
+.yellow {
+    background:linear-gradient(to bottom,rgba(249, 249, 87, 0.918),rgba(214, 231, 69, 0.918)),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+}
+
+.green {
+    background:linear-gradient(to bottom,rgba(83, 252, 120, 0.858),rgba(83, 252, 198, 0.858)),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+}
+
+.blue {
+    background:linear-gradient(to bottom,rgba(83, 252, 224, 0.858),rgba(83, 182, 252, 0.858)),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+}
+
+.purple {
+    background:linear-gradient(to bottom,rgba(83, 117, 252, 0.858),rgba(105, 83, 252, 0.858)),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    --mountain-color: #284064;
+    --silhouette-color: #20252b;
+    --moon-color: rgb(255,255,255,0.6);
+  }
+  
+  
+  .container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 2em 1em #32343c33;
+  }
+  
+  
+  
+  .star
+  {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    opacity: 0.3;
+    border-radius: 50%;
+    background:linear-gradient(to bottom,rgba(255, 255, 255, 0.718),rgba(255, 255, 255, 0.718)),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  }
+  
+  @keyframes twinkle {
+    50% {
+      opacity: 0.7;
+    }
+  }
+  
+
+
+  .shooting_star-container{
+    position: absolute;
+    width: 130%;
+    left: -200px;
+    top:0px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    transform: rotate(20deg);
+    z-index: -100;
+}
+span{
+    position: absolute;
+    left: -100px;
+    top:150px;
+    height: 3px;
+    width: 80px;
+    background: linear-gradient(to left,#fff 50%,transparent);
+    animation: animate 10s linear infinite;
+    display: block;
+    border-radius: 50px;
+    z-index:10000000
+}
+span:nth-child(even){
+    opacity: 1;
+}
+@keyframes animate{
+    0%{
+        left: 0%;
+        
+    }
+    100%{
+        left: 1000%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

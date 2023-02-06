@@ -29,7 +29,7 @@ body {
     height:50vh;
     width: auto;
     z-index: -1;
-    clip-path: inset(0 0 41% 0);
+    clip-path: inset(0 0 42.5% 0);
 }
 
 /* HEADER */

@@ -53,7 +53,7 @@
 
     .main__window-container {
         height: 65vh;
-        overflow-y: auto;
+        overflow-y: hidden;
     }
 
     .main__content-text-container {
@@ -65,6 +65,10 @@
         transform: none;
         box-sizing: border-box;
         margin: 2.5vh 0;
+    }
+
+    .main__container-img {
+        height: fit-content;
     }
 
     .main__subcontainer-img {
@@ -97,7 +101,7 @@
     }
 
     .main__content-container {
-        height: fit-content;
+        overflow-y: scroll;
     }
 
     .main__content-img-maths {
@@ -114,9 +118,16 @@
         position: static;
         width: 100%;
         margin: 0;
-        padding: 2vh;
+        padding: 2vh 2vh 0 2vh;
         box-sizing: border-box;
     }
+
+    .main__content-img-maths-counter {
+        color:rgb(142, 230, 255);
+        bottom:-37%; 
+
+    }
+
 
 
   }

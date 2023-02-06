@@ -1,0 +1,122 @@
+@media (max-width: 800px) {
+
+    .body {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .header__container-main {
+        margin: 1vh 3vh;
+        margin-bottom: 0vh;
+        height: 16vh;
+    }
+
+    .prism {
+        width: 115vw;
+        height: auto;
+        overflow-x: hidden;
+    }
+
+    .home__background {
+        width: 100vw;
+    }
+
+    .main__container {
+        width: 100vw;
+        margin: 2vh auto;
+    }
+
+    .main__window-container {
+        width: 100vw;
+    }
+
+    .footer__container {
+        position: none;
+        flex-direction: row;
+        height: 40px;
+        width: 100vw;
+        bottom: 0px;
+        left:0px;
+        
+    }
+
+    .main__projects-container {
+        margin:1vh 2vw;
+        margin-top: 0vh;
+        width: 96vw;
+        gap:5vw;
+    }
+
+    .main__project {
+        width: 20vw;
+    }
+
+    .main__window-container {
+        height: 65vh;
+        overflow-y: auto;
+    }
+
+    .main__content-text-container {
+        width: 100%;
+        position: static;
+        height: fit-content;
+        left: 0;
+        top: 0;
+        transform: none;
+        box-sizing: border-box;
+        margin: 2.5vh 0;
+    }
+
+    .main__subcontainer-img {
+        width: 100vw;
+        height: auto;
+
+    }
+
+    .main__content-text-descr {
+        width: 100vw;
+        box-sizing: border-box;
+    }
+
+    .main__content-text-title {
+        margin-left: 2vh;
+    }
+
+    .main__content-text-type {
+        margin-left: 2vh;
+    }
+
+    .main__content-img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        left: 0;
+        top:0;
+        transform: none;
+        margin: 2vh 0;
+    }
+
+    .main__content-container {
+        height: fit-content;
+    }
+
+    .main__content-img-maths {
+        position: static;
+        width: 100%;
+        height: auto;
+        transform: none;
+        top:0;
+        left:0;
+
+    }
+
+    .main__content-gr-info-pin {
+        position: static;
+        width: 100%;
+        margin: 0;
+        padding: 2vh;
+        box-sizing: border-box;
+    }
+
+
+  }

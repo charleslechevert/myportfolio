@@ -28,6 +28,8 @@
 
     .main__window-container {
         width: 100vw;
+        overflow-y: hidden;
+        height: 52vh;
     }
 
     .footer__container {
@@ -51,11 +53,7 @@
         width: 20vw;
     }
 
-    .main__window-container {
-        height: 65vh;
-        overflow-y: hidden;
-    }
-
+  
     .main__content-text-container {
         width: 100%;
         position: static;

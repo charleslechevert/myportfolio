@@ -26,13 +26,13 @@ app = {
     }, 1400)
     },
     moveAway() {
-        app.height++;
+        app.height = app.height+2;
         app.newDiv.style.height =`${app.height}px` 
         if (app.height > app.limitHeight ) {
             app.addLe()
             return;
         } else {
-        setTimeout(app.moveAway, 10);
+        setTimeout(app.moveAway, 20);
         }
     }
 

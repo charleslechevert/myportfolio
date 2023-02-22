@@ -23,7 +23,7 @@ app = {
     img[0].src ="8left2.png"
     img[1].src ="8right2.png"
     
-    }, 700)
+    }, 1400)
     },
     moveAway() {
         app.height++;

@@ -125,12 +125,12 @@
         color:rgb(59, 255, 209);
         margin-top: 2vh;
         position:relative;
-        margin-left: 10vh;
+        margin: 2vh 5vh;
 
     }
 
     .bottom {
-        margin: 2vh 5vh;
+        margin-top: 1vh;
     }
 
 

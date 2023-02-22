@@ -28,7 +28,7 @@ maths_btn.addEventListener('click', () => {
 
   mathsCommentCounter.textContent = `${iteration}/61`
 
-},1000)
+},5000)
 
 },{ once: true }) 
 

@@ -123,12 +123,14 @@
 
     .main__content-img-maths-counter {
         color:rgb(59, 255, 209);
-        bottom:0px; 
+        margin-top: 2vh;
+        position:relative;
+        margin-left: 10vh;
 
     }
 
     .bottom {
-        margin-top: 1vh;
+        margin: 2vh 5vh;
     }
 
 

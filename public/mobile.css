@@ -27,7 +27,7 @@
     }
 
     .main__window-container {
-        width: 99vw;
+        width: 100vw;
         overflow-y: hidden;
         height: 49vh;
         margin: 0 auto;

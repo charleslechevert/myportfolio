@@ -22,9 +22,7 @@ modal = {
     async populateVariable () {
         modal.modalOverlay = document.getElementById("modal-overlay");
             modal.openModalBtn = await modal.getAsyncDomElement("[img-gr-btn]");
-            console.log(modal.openModalBtn)
                 modal.modal = document.querySelectorAll(`[img-gr]`)
-                console.log(modal.modal)
 
         for(let i=0;i<8;i++) {
             modal.openModal(i)

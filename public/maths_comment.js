@@ -3,14 +3,15 @@
 const mathsComment = document.getElementById('maths_comment')
 const mathsCommentCounter = document.getElementById('maths_comment-counter')
 
-console.log(mathsComment)
+
 
 
 maths_btn.addEventListener('click', () => {
+  commentActive = true;
   let iteration = 1
   setInterval(() => {
-    console.log(iteration)
     iteration = iteration % 61
+    console.log(iteration)
     iteration ++;
 
     fetch(`${iteration}.png`)
@@ -27,7 +28,7 @@ maths_btn.addEventListener('click', () => {
 
   mathsCommentCounter.textContent = `${iteration}/61`
 
-},6000)
+},1000)
 
-}) 
+},{ once: true }) 
 

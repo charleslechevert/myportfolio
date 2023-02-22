@@ -109,6 +109,7 @@ font-size: 2.1rem;
 .main__project {
     animation: twinkle_spe 1s 1;
     animation-delay: 3s;
+    cursor: default;
 }
 
 @keyframes twinkle_spe {

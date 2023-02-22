@@ -12,7 +12,7 @@
     }
 
     .prism {
-        width: 110vw;
+        width: 107vw;
         height: auto;
         overflow-x: hidden;
     }
@@ -28,7 +28,7 @@
 
     .main__window-container {
         width: 99vw;
-        overflow-y: hidden;
+        overflow-x: hidden;
         height: 49vh;
         margin: 0 auto;
     }

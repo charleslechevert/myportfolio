@@ -1,6 +1,12 @@
-const names = document.querySelectorAll('.header__container-name')
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const names = document.querySelectorAll('.header__container-name')
 const main = document.querySelector('.header__container-main')
 const img = document.querySelectorAll('.header__8')
+const name = document.querySelector('.header__container-name')
+
 
 app = {
     newDiv : document.createElement("div"),
@@ -41,11 +47,4 @@ app = {
 app.main()
 
 
-
-
-
-
-
-
-
-
+})

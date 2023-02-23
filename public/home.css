@@ -26,7 +26,7 @@ body {
     position: absolute;
     right: 0;
     top: 0;
-    height:50vh;
+    height:51vh;
     width: auto;
     z-index: -1;
     clip-path: inset(0 0 42.5% 0);

@@ -101,6 +101,7 @@
 
     .main__content-container {
         overflow-y: scroll;
+        overflow-x: hidden;
     }
 
     .main__content-img-maths {

@@ -11,7 +11,7 @@ const name = document.querySelector('.header__container-name')
 app = {
     newDiv : document.createElement("div"),
     height : 0,
-    limitHeight : document.querySelector('.header__container-name').clientHeight *1.4,
+    limitHeight : name.clientHeight *1.4,
     addLe() {
         app.newDiv.classList.add('header__name')
         app.newDiv.textContent = "Le"

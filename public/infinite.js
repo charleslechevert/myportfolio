@@ -2,10 +2,10 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const names = document.querySelectorAll('.header__container-name')
+const names = document.querySelectorAll('.header__container-name')
 const main = document.querySelector('.header__container-main')
 const img = document.querySelectorAll('.header__8')
-const name = document.querySelector('.header__container-name')
+
 
 
 app = {
@@ -18,6 +18,8 @@ app = {
         main.insertBefore(app.newDiv, main.children[1]);
     },
     main() {
+    const name = document.querySelector('.header__container-name')
+    app.limitHeight = name.clientHeight *1.4
     setTimeout(() => {
     main.insertBefore(app.newDiv, main.children[1]);
     app.newDiv.style.height = '0px'
